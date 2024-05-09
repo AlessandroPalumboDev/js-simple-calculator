@@ -8,18 +8,18 @@ const display = document.getElementById('result');
 const numero = document.querySelectorAll('button.numero');
 
 // Definisco la funzione che scriva sul display della clacolatrice
-function scrivi(number) {
-    if (display === '0') {
+function scrivi(number){
+    // per sostituire lo zero che è presente nel DOM, altrimenti concatena
+    if(display.innerText === '0'){
         display.innerText = number
-    } else {
-        display.innerText = + number
+    }else{
+        display.innerText += number
     };
 };
 
 // Creo un ciclo che per ogni numero cliccato usi la funzione che scrive sul display
-for (let i = 0; i < numero.length; i++) {
+for (let i = 0; i < numero.length; i++){
     numero[i].addEventListener('click', () => {
-        scrivi(numero[i].innerText);
+        scrivi(numero[i].innerText)
     });
 };
-
