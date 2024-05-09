@@ -23,6 +23,7 @@
     - Uso codice html e css di partenza inviato
     - definisco variabile per il display della calcolatrice
     - Definisco variabile per i bottoni numerati dando a tutti la stessa classe in html
-    - Definisco la funzione che (<!---"concatenarlo al numero visualizzato in alto" !-->) scriva sul display della clacolatrice
-    - Creo un ciclo che (<!---"Aggiungere event listener a tutti i numeri"!-->) per ogni numero cliccato usi la funzione che scrive sul display
+    - Definisco la funzione che (<!---"concatenarlo al numero visualizzato in alto" -->) scriva sul display della clacolatrice
+    - Creo un ciclo che (<!---"Aggiungere event listener a tutti i numeri"-->) per ogni numero cliccato usi la funzione che scrive sul display
 
+-  MILESTONE 2
