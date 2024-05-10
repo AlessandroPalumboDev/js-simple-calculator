@@ -91,9 +91,6 @@ function operazione() {
     else {
         display.innerText = '0'
     }
-
-    // se digito "risultato" in cosole veedo il risultato dell'operazione
-    risultato = display.innerText;
 };
 
 // Aggiungo even listener al bottone uguale che al click invochi la funzione
@@ -101,6 +98,24 @@ uguale.addEventListener('click', () => {
     operazione()
 });
 
+// Definisco una variabile per il tasto canc con un ID
+const canc = document.getElementById('canc');
+
+// Definisco la funzione che resetti il display e tutti i numeri inseriti l'operatore e il risultato
+function reset(){
+    numero1 = '';
+    numero2 = '';
+    display.innerText = '0';
+    operatore = '';
+};
+
+// Aggiungo un event listener al tasto canc che al click esegui la funzione di reset
+canc.addEventListener('click', () => {
+    reset()
+});
+
+// se digito "risultato" in cosole veedo il risultato dell'operazione
+risultato = display.innerText;
 
 
 
