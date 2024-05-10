@@ -1,8 +1,7 @@
 'use strict';
 
-
 // definisco variabile per il display della calcolatrice
-const display = document.getElementById('result');
+let display = document.getElementById('result');
 
 // Definisco variabile per i bottoni numerati dando a tutti la stessa classe in html
 const numero = document.querySelectorAll('button.numero');
@@ -24,6 +23,7 @@ for (let i = 0; i < numero.length; i++){
     });
 };
 
+
 // Definisco variabile per i bottoni operatore dando a tutti un id diverso in html
 let piu = document.getElementById('piu');
 let meno = document.getElementById('meno');
@@ -37,15 +37,28 @@ let operatore;
 
 // Definisco la funzione che al click del pulsante operatore modifica la variabile del primo numero e quella dell'operatore e resetti il display
 function opera(){
-    
-
+    numero1 = Number(display.innerText);
+    display.innerText = '0';
+    if(operatori[0] === piu){
+        operatore = piu
+    }else if(operatori[1] === meno){
+        operatore = meno
+    } else if(operatori[2] === per){
+        operatore = per
+    }else if(operatori[3] === diviso){
+        operatore = diviso
+    }
 };
 
 // Definisco una variabile operatore dando la stessa classe a tutti i pulsanti operatore 
 const operatori = document.querySelectorAll('button.operatori');
 
-//  Uso la classe operatore per fare un ciclo for che usi la funzione che resetta il display e modifichi le variabili numero-1 e quella operatore dedogli un event listener
-
+//  Uso la classe operatore per fare un ciclo for che usi la funzione che resetta il display e modifichi le variabili numero-1 e quella operatore dandogli un event listener
+for (let i = 0; i < operatori.length; i++){
+    operatori[i].addEventListener('click', () => {
+        opera()
+    });
+};
 
 
 
