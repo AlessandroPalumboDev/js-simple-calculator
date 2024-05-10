@@ -51,7 +51,7 @@ function opera(oper) {
     numero1 = display.innerText;
 
     // resetto il display
-    display.innerText = '0';
+    display.innerText = '';
 
     // salva l'operatore
     operatore = oper;
@@ -87,6 +87,7 @@ function operazione() {
     } else {
         display.innerText = '0'
     };
+    risultato = display.innerText;
 };
 
 // Aggiungo even listener al bottone uguale che al click invochi la funzione
@@ -111,6 +112,3 @@ function reset() {
 canc.addEventListener('click', () => {
     reset()
 });
-
-// se digito "risultato" in cosole veedo il risultato dell'operazione
-risultato = display.innerText;
