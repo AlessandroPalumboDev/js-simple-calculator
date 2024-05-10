@@ -78,6 +78,7 @@ function operazione() {
         display.innerText = (Number(numero1) * Number(numero2));
     }
     else if (operatore === diviso) {
+        // BONUS
         if (numero2 !== '0') {
             display.innerText = Number(numero1) / Number(numero2);
         } else {
@@ -92,6 +93,8 @@ function operazione() {
 uguale.addEventListener('click', () => {
     operazione()
 });
+
+// MILESTONE 4
 
 // Definisco una variabile per il tasto canc con un ID
 const canc = document.getElementById('canc');
