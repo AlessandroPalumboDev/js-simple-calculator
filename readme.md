@@ -32,3 +32,8 @@
    - Definisco la funzione che (COMMENTO <!-- "quando si clicca su un operatore, salvare l'operatore cliccato e il primo operando" -->) al click del pulsante operatore modifica la variabile del primo numero e quella dell'operatore e resetti il display
    - Definisco una variabile operatore dando la stessa classe a tutti i pulsanti operatore 
    - Uso la classe operatore per fare un ciclo for che (COMMENTO <!-- "Aggiungere event listener a tutti gli operatori" -->) e che usi la funzione che resetta il display e modifichi le variabili numero-1 e quella operatore
+
+- MILESTONE 3
+   - Definisco variabile per il bottone uguale con un ID
+   - Definisco la funzione che (COMMENTO<!-- "salvare il secondo operando, effetuare il calcolo corretto in base all'operatore selezionato e visualizzare il risultato in alto" -->) salva il secondo numero, esegue la specifica operazione e visualizza risultato sul display
+   - Aggiungo even listener al bottone uguale che al click invochi la funzione
