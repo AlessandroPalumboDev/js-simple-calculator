@@ -27,11 +27,10 @@
     - Creo un ciclo che (COMMENTO <!---"Aggiungere event listener a tutti i numeri"-->) per ogni numero cliccato usi la funzione che scrive sul display
 
 -  MILESTONE 2
-   - Definisco variabile per i bottoni operatore dando a tutti un id diverso in html
-   - Definisco variabili di numero-1 numero-2 e operatore
-   - Definisco la funzione che (COMMENTO <!-- "quando si clicca su un operatore, salvare l'operatore cliccato e il primo operando" -->) al click del pulsante operatore modifica la variabile del primo numero e quella dell'operatore e resetti il display
-   - Definisco una variabile operatore dando la stessa classe a tutti i pulsanti operatore 
-   - Uso la classe operatore per fare un ciclo for che (COMMENTO <!-- "Aggiungere event listener a tutti gli operatori" -->) e che usi la funzione che resetta il display e modifichi le variabili numero-1 e quella operatore
+   - Definisco variabili di numero-1 numero-2 e operatore usato e risultato
+   - Definisco variabile dei 4 operatori
+   - Assegno even listener ai 4 operatori che al click eseguino la funzione opera
+   - Definisco la funzione che (COMMENTO <!-- "quando si clicca su un operatore, salvare l'operatore cliccato e il primo operando" -->) al click del pulsante operatore modifica la variabile del primo numero e quella dell'operatore e resetti il display 
 
 - MILESTONE 3
    - Definisco variabile per il bottone uguale con un ID
@@ -42,3 +41,6 @@
    - Definisco una variabile per il tasto canc con un ID
    - Definisco la funzione che resetti il display e tutti i numeri inseriti e l'operatore
    - Aggiungo un event listener al tasto canc che al click esegui la funzione di reset
+
+- BONUS
+   - Aggiungo un IF aggiuntivo all' interno dell' if della funzione operazioni con una condizione per la quale che se il secondo numero è uguale a 0 risulta errore
