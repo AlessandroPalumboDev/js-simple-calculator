@@ -75,14 +75,17 @@ function operazione() {
         display.innerText = Number(numero1) - Number(numero2);
     }
     else if (operatore === per) {
-        display.innerText = Number(numero1) * Number(numero2);
+        display.innerText = (Number(numero1) * Number(numero2));
     }
     else if (operatore === diviso) {
-        display.innerText = Number(numero1) / Number(numero2);
-    }
-    else {
+        if (numero2 !== '0') {
+            display.innerText = Number(numero1) / Number(numero2);
+        } else {
+            display.innerText = 'non puoi dividire per 0';
+        };
+    } else {
         display.innerText = '0'
-    }
+    };
 };
 
 // Aggiungo even listener al bottone uguale che al click invochi la funzione
@@ -94,7 +97,7 @@ uguale.addEventListener('click', () => {
 const canc = document.getElementById('canc');
 
 // Definisco la funzione che resetti il display e tutti i numeri inseriti l'operatore e il risultato
-function reset(){
+function reset() {
     numero1 = '';
     numero2 = '';
     display.innerText = '0';
@@ -108,8 +111,3 @@ canc.addEventListener('click', () => {
 
 // se digito "risultato" in cosole veedo il risultato dell'operazione
 risultato = display.innerText;
-
-
-
-
-
