@@ -30,15 +30,22 @@ let meno = document.getElementById('meno');
 let per = document.getElementById('per');
 let diviso = document.getElementById('diviso');
 
-// Definisco variabili di numero-1 numero-2 e operatore
+// Definisco variabili di numero-1 numero-2 operatore e risultato
 let numero1;
 let numero2;
 let operatore;
+let risultato;
 
 // Definisco la funzione che al click del pulsante operatore modifica la variabile del primo numero e quella dell'operatore e resetti il display
 function opera() {
-    numero1 = Number(display.innerText);
+
+    // salvo numero1
+    numero1 = display.innerText;
+
+    // resetto il display
     display.innerText = '0';
+
+    // cambio l'operatore in base a quello selezionato
     if (operatori[0] === piu) {
         operatore = piu
     } else if (operatori[1] === meno) {
@@ -59,6 +66,40 @@ for (let i = 0; i < operatori.length; i++) {
         opera()
     });
 };
+
+// Definisco variabile per il bottone uguale con un ID
+let uguale = document.getElementById('uguale');
+
+// Definisco la funzione che salva il secondo numero, esegue la specifica operazione e visualizza risultato sul display
+function operazione() {
+
+    // salvo numero2
+    numero2 = display.innerText;
+
+    // faccio l'operazione in base all'operatore e visualizzo direttamente il risultato sul display
+    if (operatore === piu) {
+        display.innerText = Number(numero1) + Number(numero2);
+    } else if (operatore === meno) {
+        display.innerText = Number(numero1) - Number(numero2);
+    }
+    else if (operatore === per) {
+        display.innerText = Number(numero1) * Number(numero2);
+    }
+    else if (operatore === diviso) {
+        display.innerText = Number(numero1) / Number(numero2);
+    }
+    else {
+        display.innerText = '0'
+    }
+
+    // se digito "risultato" in cosole veedo il risultato dell'operazione
+    risultato = display.innerText;
+};
+
+// Aggiungo even listener al bottone uguale che al click invochi la funzione
+uguale.addEventListener('click', () => {
+    operazione()
+});
 
 
 
