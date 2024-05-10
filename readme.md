@@ -37,3 +37,8 @@
    - Definisco variabile per il bottone uguale con un ID
    - Definisco la funzione che (COMMENTO<!-- "salvare il secondo operando, effetuare il calcolo corretto in base all'operatore selezionato e visualizzare il risultato in alto" -->) salva il secondo numero, esegue la specifica operazione e visualizza risultato sul display
    - Aggiungo even listener al bottone uguale che al click invochi la funzione
+
+- MILESTONE 4
+   - Definisco una variabile per il tasto canc con un ID
+   - Definisco la funzione che resetti il display e tutti i numeri inseriti e l'operatore
+   - Aggiungo un event listener al tasto canc che al click esegui la funzione di reset
